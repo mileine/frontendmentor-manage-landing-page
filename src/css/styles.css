@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Be Vietnam', sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-size: 16px;
   color: #242D52; }
 
@@ -37,9 +37,13 @@ a {
   border-radius: 50px;
   background: #F3603C;
   color: #fff; }
+  .btn.btn-shadow {
+    box-shadow: 0 2px 5px #FF9F8E; }
   .btn.btn-secondary {
     background: #fff;
     color: #F3603C; }
+    .btn.btn-secondary.btn-shadow {
+      box-shadow: 0 5px 10px #DB5943; }
 
 .container {
   position: relative; }
@@ -198,9 +202,18 @@ a {
     border: none;
     width: 220px;
     height: 44px;
-    color: #8D8D8D; }
+    color: #8D8D8D;
+    font-family: "Be Vietnam", sans-serif;
+    font-size: 13px;
+    letter-spacing: -0.1px; }
   .footer button {
-    border: none; }
+    border: none;
+    height: 44px;
+    width: 64px;
+    border-radius: 22px; }
+  .footer .copyright {
+    font-size: 13px;
+    opacity: 50%; }
 
 .attribution {
   position: relative;

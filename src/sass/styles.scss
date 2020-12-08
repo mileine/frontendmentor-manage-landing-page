@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Be Vietnam', sans-serif;
+  font-family: $font;
   font-size: 16px;
   color: $blue;
 }
@@ -47,9 +47,15 @@ a {
   border-radius: 50px;
   background : $orange;
   color: $white;
+  &.btn-shadow {
+    box-shadow: 0 2px 5px $orange-shadow;
+  }
   &.btn-secondary {
     background: $white;
     color: $orange;
+    &.btn-shadow {
+      box-shadow: 0 5px 10px #DB5943;
+    }
   }
 }
 
@@ -244,9 +250,19 @@ a {
     width: 220px;
     height: 44px;
     color: $gray;
+    font-family: $font;
+    font-size: 13px;
+    letter-spacing: -0.1px;
   }
   button {
     border: none;
+    height: 44px;
+    width: 64px;
+    border-radius: 22px;
+  }
+  .copyright {
+    font-size: 13px;
+    opacity: 50%;
   }
 }
 
