@@ -35,6 +35,7 @@ h2 {
 p {
   letter-spacing: -0.71px;
   line-height: 26px;
+  opacity: 51%;
 }
 
 a {
@@ -68,9 +69,8 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  max-width: 1110px;
-  margin: 0 auto;
+  padding: 20px 170px;
+  width: 100%;
   align-items: center;
   .nav-links {
     display: flex;
@@ -83,22 +83,32 @@ a {
 .intro {
   display: flex;
   justify-content: space-between;
-  max-width: 1110px;
-  padding: 1rem;
-  margin: 0 auto;
+  width: 100%;
+  padding: 60px 170px;
   .intro-text {
     width: 445px;
   }
   .intro-illustration {
-    width: 260px;
+    width: 540px;
   }
 }
 
 .about {
+  width: 100%;
   display: flex;
-  max-width: 1110px;
-  padding: 1rem;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding: 60px 170px;
+  .about-summary {
+    min-width: 445px;
+    .about-content {
+      width: 400px;
+    }
+  }
+  .about-list-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 }
 
 .testimonials {
@@ -144,13 +154,13 @@ a {
   background: $orange;
   color: $white;
   width: 100%;
+  padding: 60px 170px;
   .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 220px;
     max-width: 1110px;
-    margin: 0 auto;
   }
   &::after {
     content: '';
@@ -166,13 +176,13 @@ a {
 .footer {
   background: $black;
   color: $white;
-  padding: 20px;
+  padding: 60px 170px;
   .content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100px;
+    height: 130px;
     max-width: 1110px;
     margin: 0 auto;
   }
@@ -183,10 +193,16 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100px;
+    height: 130px;
   }
   .link a{
+    display: block;
+    width: 255px;
+    margin-bottom: 10px;
     color: $white;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.23px;
     &:hover {
       color: $orange;
     }
@@ -200,8 +216,11 @@ a {
   }
   input {
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 22px;
     border: none;
+    width: 220px;
+    height: 44px;
+    color: $gray;
   }
   button {
     border: none;
@@ -209,6 +228,7 @@ a {
 }
 
 .attribution {
+  position: relative;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -220,5 +240,16 @@ a {
   }
   .love {
     margin: 0 5px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('../images/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: .071;
+    top: 0;
   }
 }
