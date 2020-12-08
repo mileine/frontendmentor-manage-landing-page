@@ -80,12 +80,31 @@ a {
   padding: 60px 170px; }
   .about .about-summary {
     min-width: 445px; }
+    .about .about-summary h2 {
+      margin-bottom: 30px; }
     .about .about-summary .about-content {
       width: 400px; }
-  .about .about-list-item {
+  .about .about-list {
     display: flex;
     flex-direction: column;
-    position: relative; }
+    min-width: 540px; }
+    .about .about-list .about-list-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 40px; }
+      .about .about-list .about-list-item .index {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F3603C;
+        color: #fff;
+        height: 40px;
+        min-width: 70px;
+        border-radius: 40px;
+        margin-right: 25px; }
+      .about .about-list .about-list-item .title {
+        margin-top: 10px;
+        margin-bottom: 30px; }
 
 .testimonials {
   display: flex;

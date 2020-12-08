@@ -100,14 +100,37 @@ a {
   padding: 60px 170px;
   .about-summary {
     min-width: 445px;
+    h2 {
+      margin-bottom: 30px;
+    }
     .about-content {
       width: 400px;
     }
   }
-  .about-list-item {
+  .about-list{
     display: flex;
     flex-direction: column;
-    position: relative;
+    min-width: 540px;
+    .about-list-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      .index {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $orange;
+        color: $white;
+        height:40px;
+        min-width: 70px;
+        border-radius: 40px;
+        margin-right: 25px;
+      }
+      .title {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 
