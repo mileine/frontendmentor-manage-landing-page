@@ -3,7 +3,7 @@
 This project is a challenge by [Frontend Mentor](https://www.frontendmentor.io).
 
 
-![Manage Landing Page](# "Manage Landing Page - Design preview")
+![Manage Landing Page](https://raw.githubusercontent.com/mileine/frontendmentor-manage-landing-page/main/src/images/desktop-preview.jpg "Manage Landing Page - Design preview")
 
 
 ## Challenge description
