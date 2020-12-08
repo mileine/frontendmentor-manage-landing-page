@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,500;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Be Vietnam', sans-serif;
+  font-size: 16px; }
+
+ul {
+  list-style: none; }
+
+.container {
+  position: relative; }
+  .container::before {
+    content: '';
+    position: absolute;
+    background: url("../images/bg-simplify-section-desktop.svg");
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    background-repeat: no-repeat; }
+  .container .bg {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .header .nav-links {
+    display: flex; }
+    .header .nav-links .link:not(:last-of-type) {
+      margin-right: 1rem; }
+
+.intro {
+  display: flex;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto; }
+
+.about {
+  display: flex;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto; }
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.testimonials-cards-container {
+  display: flex;
+  align-items: center; }
+
+.get-started {
+  display: flex;
+  height: 220px;
+  width: 100%;
+  background: #F3603C;
+  position: relative; }
+  .get-started::after {
+    content: '';
+    position: absolute;
+    background: url("../images/bg-simplify-section-desktop.svg");
+    width: 100%;
+    height: 100%;
+    opacity: .071; }
