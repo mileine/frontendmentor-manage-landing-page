@@ -6,10 +6,39 @@
 
 body {
   font-family: 'Be Vietnam', sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #242D52; }
 
 ul {
   list-style: none; }
+
+h1, h2, h3 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1px; }
+
+h2 {
+  font-size: 40px;
+  line-height: 44px; }
+
+p {
+  letter-spacing: -0.71px;
+  line-height: 26px; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #F3603C;
+  color: #fff; }
+  .btn.btn-secondary {
+    background: #fff;
+    color: #F3603C; }
 
 .container {
   position: relative; }
@@ -21,17 +50,14 @@ ul {
     min-width: 100%;
     z-index: -1;
     background-repeat: no-repeat; }
-  .container .bg {
-    position: absolute;
-    top: 0;
-    left: 0; }
 
 .header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 1110px;
+  margin: 0 auto;
+  align-items: center; }
   .header .nav-links {
     display: flex; }
     .header .nav-links .link:not(:last-of-type) {
@@ -39,13 +65,18 @@ ul {
 
 .intro {
   display: flex;
-  max-width: 1200px;
+  justify-content: space-between;
+  max-width: 1110px;
   padding: 1rem;
   margin: 0 auto; }
+  .intro .intro-text {
+    width: 445px; }
+  .intro .intro-illustration {
+    width: 260px; }
 
 .about {
   display: flex;
-  max-width: 1200px;
+  max-width: 1110px;
   padding: 1rem;
   margin: 0 auto; }
 
@@ -56,18 +87,93 @@ ul {
 
 .testimonials-cards-container {
   display: flex;
-  align-items: center; }
+  align-content: center;
+  overflow-x: scroll;
+  max-width: 100vw;
+  padding: 40px 0; }
+  .testimonials-cards-container .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 540px;
+    height: 220px;
+    background: #FAFAFA;
+    position: relative; }
+    .testimonials-cards-container .testimonial-card .avatar {
+      width: 72px;
+      height: 72px;
+      position: absolute;
+      top: -36px; }
+    .testimonials-cards-container .testimonial-card .name {
+      margin-top: 46px; }
+    .testimonials-cards-container .testimonial-card .testimonial {
+      text-align: center; }
+    .testimonials-cards-container .testimonial-card:not(:last-of-type) {
+      margin-right: 10px; }
 
 .get-started {
-  display: flex;
-  height: 220px;
-  width: 100%;
+  position: relative;
   background: #F3603C;
-  position: relative; }
+  color: #fff;
+  width: 100%; }
+  .get-started .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 220px;
+    max-width: 1110px;
+    margin: 0 auto; }
   .get-started::after {
     content: '';
     position: absolute;
     background: url("../images/bg-simplify-section-desktop.svg");
     width: 100%;
     height: 100%;
-    opacity: .071; }
+    opacity: .071;
+    top: 0; }
+
+.footer {
+  background: #1D1E25;
+  color: #fff;
+  padding: 20px; }
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100px;
+    max-width: 1110px;
+    margin: 0 auto; }
+  .footer .logo-title {
+    fill: #fff; }
+  .footer .links-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100px; }
+  .footer .link a {
+    color: #fff; }
+    .footer .link a:hover {
+      color: #F3603C; }
+  .social
+.footer > a:hover path {
+    fill: #F3603C; }
+  .footer .contact-form, .footer .copyright {
+    align-self: flex-end; }
+  .footer input {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none; }
+  .footer button {
+    border: none; }
+
+.attribution {
+  padding: 10px;
+  text-align: center;
+  font-size: 12px; }
+  .attribution a {
+    color: #F3603C; }
+  .attribution > p {
+    letter-spacing: .4px; }
+  .attribution .love {
+    margin: 0 5px; }
