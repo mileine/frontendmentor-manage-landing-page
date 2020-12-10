@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,500;1,400;1,700&display=swap');
 @import '_var';
+@import 'mixin';
 
 * {
   margin: 0;
@@ -72,6 +73,9 @@ a {
   }
 }
 
+/*
+  Header
+----------------------*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -80,17 +84,28 @@ a {
   align-items: center;
   .nav-links {
     display: flex;
+    @include mobile {
+      flex-direction: column;
+      background-color: aliceblue;
+      visibility: hidden;
+    }
     .link:not(:last-of-type) {
-      margin-right: 1rem;  
+      margin-right: 30px;  
     }
   }
 }
 
+/*
+  Intro
+----------------------*/
 .intro {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 60px 170px;
+  @include mobile {
+    flex-direction: column;
+  }
   .intro-text {
     width: 445px;
   }
@@ -99,11 +114,17 @@ a {
   }
 }
 
+/*
+  About
+----------------------*/
 .about {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 60px 170px;
+  @include mobile {
+    flex-direction: column;
+  }
   .about-summary {
     min-width: 445px;
     h2 {
@@ -140,10 +161,15 @@ a {
   }
 }
 
+/*
+  Testimonials
+----------------------*/
+
 .testimonials {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 170px;
 }
 
 .testimonials-cards-container {
@@ -178,6 +204,9 @@ a {
   }
 }
 
+/*
+  Get started
+----------------------*/
 .get-started {
   position: relative;
   background: $orange;
@@ -189,7 +218,7 @@ a {
     align-items: center;
     justify-content: space-between;
     height: 220px;
-    max-width: 1110px;
+    width: 100%;
   }
   &::after {
     content: '';
@@ -202,6 +231,9 @@ a {
   }
 }
 
+/*
+  Footer
+----------------------*/
 .footer {
   background: $black;
   color: $white;
@@ -212,7 +244,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     height: 130px;
-    max-width: 1110px;
+    width: 100%;
     margin: 0 auto;
   }
   .logo-title {

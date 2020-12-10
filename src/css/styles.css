@@ -56,6 +56,9 @@ a {
     z-index: -1;
     background-repeat: no-repeat; }
 
+/*
+  Header
+----------------------*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -64,24 +67,41 @@ a {
   align-items: center; }
   .header .nav-links {
     display: flex; }
+    @media (max-width: 500px) {
+      .header .nav-links {
+        flex-direction: column;
+        background-color: aliceblue;
+        visibility: hidden; } }
     .header .nav-links .link:not(:last-of-type) {
-      margin-right: 1rem; }
+      margin-right: 30px; }
 
+/*
+  Intro
+----------------------*/
 .intro {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 60px 170px; }
+  @media (max-width: 500px) {
+    .intro {
+      flex-direction: column; } }
   .intro .intro-text {
     width: 445px; }
   .intro .intro-illustration {
     width: 540px; }
 
+/*
+  About
+----------------------*/
 .about {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 60px 170px; }
+  @media (max-width: 500px) {
+    .about {
+      flex-direction: column; } }
   .about .about-summary {
     min-width: 445px; }
     .about .about-summary h2 {
@@ -110,10 +130,14 @@ a {
         margin-top: 10px;
         margin-bottom: 30px; }
 
+/*
+  Testimonials
+----------------------*/
 .testimonials {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 170px; }
 
 .testimonials-cards-container {
   display: flex;
@@ -141,6 +165,9 @@ a {
     .testimonials-cards-container .testimonial-card:not(:last-of-type) {
       margin-right: 10px; }
 
+/*
+  Get started
+----------------------*/
 .get-started {
   position: relative;
   background: #F3603C;
@@ -152,7 +179,7 @@ a {
     align-items: center;
     justify-content: space-between;
     height: 220px;
-    max-width: 1110px; }
+    width: 100%; }
   .get-started::after {
     content: '';
     position: absolute;
@@ -162,6 +189,9 @@ a {
     opacity: .071;
     top: 0; }
 
+/*
+  Footer
+----------------------*/
 .footer {
   background: #1D1E25;
   color: #fff;
@@ -172,7 +202,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     height: 130px;
-    max-width: 1110px;
+    width: 100%;
     margin: 0 auto; }
   .footer .logo-title {
     fill: #fff; }
@@ -223,7 +253,8 @@ a {
   .attribution a {
     color: #F3603C; }
   .attribution > p {
-    letter-spacing: .4px; }
+    letter-spacing: .4px;
+    opacity: 1; }
   .attribution .love {
     margin: 0 5px; }
   .attribution::after {
