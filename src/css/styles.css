@@ -74,6 +74,9 @@ a {
         visibility: hidden; } }
     .header .nav-links .link:not(:last-of-type) {
       margin-right: 30px; }
+  @media (max-width: 500px) {
+    .header {
+      padding: 20px; } }
 
 /*
   Intro
@@ -85,6 +88,7 @@ a {
   padding: 60px 170px; }
   @media (max-width: 500px) {
     .intro {
+      padding: 20px;
       flex-direction: column; } }
   .intro .intro-text {
     width: 445px; }
@@ -101,6 +105,7 @@ a {
   padding: 60px 170px; }
   @media (max-width: 500px) {
     .about {
+      padding: 20px;
       flex-direction: column; } }
   .about .about-summary {
     min-width: 445px; }
@@ -163,7 +168,7 @@ a {
     .testimonials-cards-container .testimonial-card .testimonial {
       text-align: center; }
     .testimonials-cards-container .testimonial-card:not(:last-of-type) {
-      margin-right: 10px; }
+      margin-right: 20px; }
 
 /*
   Get started

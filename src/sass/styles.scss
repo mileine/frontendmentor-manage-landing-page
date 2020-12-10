@@ -93,6 +93,9 @@ a {
       margin-right: 30px;  
     }
   }
+  @include mobile {
+    padding: 20px;
+  }
 }
 
 /*
@@ -104,7 +107,8 @@ a {
   width: 100%;
   padding: 60px 170px;
   @include mobile {
-    flex-direction: column;
+      padding: 20px;
+      flex-direction: column;
   }
   .intro-text {
     width: 445px;
@@ -123,6 +127,7 @@ a {
   justify-content: space-between;
   padding: 60px 170px;
   @include mobile {
+    padding: 20px;
     flex-direction: column;
   }
   .about-summary {
@@ -199,7 +204,7 @@ a {
       text-align: center;
     }
     &:not(:last-of-type) {
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
 }
