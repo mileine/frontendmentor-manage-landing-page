@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 0; }
 
 body {
   font-family: "Be Vietnam", sans-serif;
@@ -19,10 +20,16 @@ h1 {
   font-size: 56px;
   line-height: 64px;
   letter-spacing: -1px; }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-size: 40px;
   line-height: 44px; }
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 30px; } }
 
 p {
   letter-spacing: -0.71px;
@@ -45,8 +52,13 @@ a {
     .btn.btn-secondary.btn-shadow {
       box-shadow: 0 5px 10px #DB5943; }
 
+main {
+  max-width: 1110px;
+  margin: 0 auto; }
+
 .container {
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   .container::before {
     content: '';
     position: absolute;
@@ -62,19 +74,18 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 170px;
   width: 100%;
   align-items: center; }
   .header .nav-links {
     display: flex; }
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       .header .nav-links {
         flex-direction: column;
         background-color: aliceblue;
         visibility: hidden; } }
     .header .nav-links .link:not(:last-of-type) {
       margin-right: 30px; }
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     .header {
       padding: 20px; } }
 
@@ -84,16 +95,15 @@ a {
 .intro {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 60px 170px; }
-  @media (max-width: 500px) {
+  width: 100%; }
+  @media (max-width: 700px) {
     .intro {
       padding: 20px;
       flex-direction: column; } }
   .intro .intro-text {
-    width: 445px; }
+    width: 50%; }
   .intro .intro-illustration {
-    width: 540px; }
+    width: 50%; }
 
 /*
   About
@@ -101,22 +111,23 @@ a {
 .about {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 60px 170px; }
-  @media (max-width: 500px) {
+  justify-content: space-between; }
+  @media (max-width: 700px) {
     .about {
       padding: 20px;
       flex-direction: column; } }
   .about .about-summary {
-    min-width: 445px; }
+    min-width: 50%; }
     .about .about-summary h2 {
       margin-bottom: 30px; }
     .about .about-summary .about-content {
       width: 400px; }
   .about .about-list {
     display: flex;
-    flex-direction: column;
-    min-width: 540px; }
+    flex-direction: column; }
+    @media (max-width: 700px) {
+      .about .about-list {
+        width: 100%; } }
     .about .about-list .about-list-item {
       display: flex;
       align-items: flex-start;
@@ -185,6 +196,13 @@ a {
     justify-content: space-between;
     height: 220px;
     width: 100%; }
+    @media (max-width: 700px) {
+      .get-started .content {
+        flex-direction: column;
+        height: auto; } }
+  @media (max-width: 700px) {
+    .get-started {
+      padding: 60px 35px; } }
   .get-started::after {
     content: '';
     position: absolute;
@@ -201,6 +219,9 @@ a {
   background: #1D1E25;
   color: #fff;
   padding: 60px 170px; }
+  @media (max-width: 700px) {
+    .footer {
+      padding: 20px; } }
   .footer .content {
     display: flex;
     flex-direction: column;
@@ -209,6 +230,24 @@ a {
     height: 130px;
     width: 100%;
     margin: 0 auto; }
+    @media (max-width: 700px) {
+      .footer .content {
+        height: auto;
+        width: 300px;
+        align-content: center; }
+        .footer .content .social {
+          order: 3; }
+        .footer .content .logo {
+          order: 4; }
+        .footer .content .contact-form {
+          order: 1;
+          margin-bottom: 55px; }
+        .footer .content .sitemap {
+          order: 2; }
+          .footer .content .sitemap .link a {
+            width: auto; }
+        .footer .content .copyright {
+          order: 5; } }
   .footer .logo-title {
     fill: #fff; }
   .footer .links-list {

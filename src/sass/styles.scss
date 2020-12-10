@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 0;
 }
 
 body {
@@ -26,11 +27,17 @@ h1 {
   font-size: 56px;
   line-height: 64px;
   letter-spacing: -1px;
+  @include mobile {
+    font-size: 40px;
+  }
 }
 
 h2 {
   font-size: 40px;
   line-height: 44px;
+  @include mobile {
+    font-size: 30px;
+  }
 }
 
 p {
@@ -60,8 +67,14 @@ a {
   }
 }
 
+main {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
 .container {
   position: relative;
+  overflow-x: hidden;
   &::before {
     content:'';
     position: absolute;
@@ -79,7 +92,6 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 170px;
   width: 100%;
   align-items: center;
   .nav-links {
@@ -105,16 +117,15 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 60px 170px;
   @include mobile {
       padding: 20px;
       flex-direction: column;
   }
   .intro-text {
-    width: 445px;
+    width: 50%;
   }
   .intro-illustration {
-    width: 540px;
+    width: 50%;
   }
 }
 
@@ -125,13 +136,12 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 60px 170px;
   @include mobile {
     padding: 20px;
     flex-direction: column;
   }
   .about-summary {
-    min-width: 445px;
+    min-width: 50%;
     h2 {
       margin-bottom: 30px;
     }
@@ -142,7 +152,10 @@ a {
   .about-list{
     display: flex;
     flex-direction: column;
-    min-width: 540px;
+    // min-width: 540px;
+    @include mobile {
+      width: 100%;
+    }
     .about-list-item {
       display: flex;
       align-items: flex-start;
@@ -224,6 +237,13 @@ a {
     justify-content: space-between;
     height: 220px;
     width: 100%;
+    @include mobile {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  @include mobile {
+    padding: 60px 35px;
   }
   &::after {
     content: '';
@@ -243,6 +263,9 @@ a {
   background: $black;
   color: $white;
   padding: 60px 170px;
+  @include mobile {
+    padding: 20px;
+  }
   .content {
     display: flex;
     flex-direction: column;
@@ -251,6 +274,30 @@ a {
     height: 130px;
     width: 100%;
     margin: 0 auto;
+    @include mobile {
+      height: auto;
+      width: 300px;
+      align-content: center;
+      .social {
+        order: 3;
+      }
+      .logo {
+        order: 4;
+      }
+      .contact-form {
+        order: 1;
+        margin-bottom: 55px;
+      }
+      .sitemap {
+        order: 2;
+        .link a {
+          width: auto;
+        }
+      }
+      .copyright {
+        order: 5;
+      }
+    }
   }
   .logo-title {
     fill: $white;
