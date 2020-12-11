@@ -285,10 +285,7 @@ main {
 .footer {
   background: $black;
   color: $white;
-  padding: 60px 170px;
-  @include mobile {
-    padding: 20px;
-  }
+  padding: 20px;
   .content {
     display: flex;
     flex-direction: column;
@@ -297,9 +294,10 @@ main {
     height: 130px;
     width: 100%;
     margin: 0 auto;
+    max-width: 1110px;;
     @include mobile {
       height: auto;
-      width: 300px;
+      width: 330px;
       align-content: center;
       .social {
         order: 3;
@@ -333,7 +331,6 @@ main {
   }
   .link a{
     display: block;
-    width: 255px;
     margin-bottom: 10px;
     color: $white;
     font-size: 15px;
@@ -343,9 +340,13 @@ main {
       color: $orange;
     }
   }
-  .social 
-    &> a:hover  path {
-    fill: $orange;
+  .social {
+    a {
+      margin-right: 10px;
+      &:hover  path {
+        fill: $orange;
+      }
+    }
   }
   .contact-form, .copyright {
     align-self: flex-end;
