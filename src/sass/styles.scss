@@ -152,14 +152,33 @@ main {
   .about-list{
     display: flex;
     flex-direction: column;
-    // min-width: 540px;
     @include mobile {
       width: 100%;
     }
     .about-list-item {
-      display: flex;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 70px auto;
+      grid-template-areas: "number title"
+                            ". desc";
+      column-gap: 10px;
       margin-bottom: 40px;
+      @include mobile {
+       grid-template-areas: "number title"
+                            "desc desc";
+        row-gap: 10px;
+        .index {
+          position: relative;
+          &::after {
+            content: '';
+            width: 470px;
+            height: 40px;
+            background: $orange-light;
+            z-index: -1;
+            position: absolute;
+            left: 30px;
+          }
+        }
+      }
       .index {
         display: flex;
         align-items: center;
@@ -169,11 +188,15 @@ main {
         height:40px;
         min-width: 70px;
         border-radius: 40px;
-        margin-right: 25px;
+        grid-area: number;
       }
-      .title {
-        margin-top: 10px;
-        margin-bottom: 30px;
+      .title-wrapper {
+        grid-area: title;
+        display: flex;
+        align-items: center;
+      }
+      .description {
+        grid-area: desc;
       }
     }
   }
