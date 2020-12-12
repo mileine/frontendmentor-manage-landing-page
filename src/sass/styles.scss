@@ -94,19 +94,25 @@ main {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  padding-top: 60px;
   .nav-links {
     display: flex;
     @include mobile {
       flex-direction: column;
       background-color: aliceblue;
       visibility: hidden;
+      width: 0;
+      height: 0;
     }
     .link:not(:last-of-type) {
       margin-right: 30px;  
     }
   }
   @include mobile {
-    padding: 20px;
+    padding: 40px 20px 0 20px;
+    a {
+      display: none;
+    }
   }
 }
 
@@ -116,13 +122,24 @@ main {
 .intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  margin: 120px auto;
   @include mobile {
       padding: 20px;
+      margin-top: 40px;
       flex-direction: column;
   }
   .intro-text {
-    width: 50%;
+    max-width: 450px;
+    & > h1 {
+      margin-bottom: 20px;
+    }
+    & > p {
+      display: block;
+      max-width: 350px;
+      margin-bottom: 40px;
+    }
   }
   .intro-illustration {
     width: 50%;
