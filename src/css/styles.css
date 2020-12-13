@@ -131,9 +131,11 @@ main {
         .header nav .btn-close {
           position: absolute;
           top: 40px;
-          right: 20px; }
+          right: 20px;
+          background: transparent; }
       .header .btn-menu {
-        display: block; }
+        display: block;
+        background: transparent; }
         .header .btn-menu.hidden {
           display: none; } }
   .header .btn {

@@ -157,10 +157,12 @@ main {
        position: absolute;
        top: 40px;
        right: 20px;
+       background: transparent;
      }
     }
     .btn-menu {
       display: block;
+      background: transparent;
       &.hidden {
         display: none;
       }
