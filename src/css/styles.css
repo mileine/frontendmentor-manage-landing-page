@@ -20,14 +20,14 @@ h1 {
   font-size: 56px;
   line-height: 64px;
   letter-spacing: -1px; }
-  @media (max-width: 700px) {
+  @media (max-width: 375px) {
     h1 {
       font-size: 40px; } }
 
 h2 {
   font-size: 40px;
   line-height: 44px; }
-  @media (max-width: 700px) {
+  @media (max-width: 375px) {
     h2 {
       font-size: 30px; } }
 
@@ -55,6 +55,9 @@ a {
 main {
   max-width: 1110px;
   margin: 0 auto; }
+  @media (min-width: 376px) and (max-width: 922px) {
+    main {
+      padding: 0 20px; } }
 
 .container {
   position: relative;
@@ -62,11 +65,15 @@ main {
   .container::before {
     content: '';
     position: absolute;
-    background: url("../images/bg-simplify-section-desktop.svg");
+    background: url("../images/bg-intro-desktop.svg");
     min-height: 100%;
     min-width: 100%;
     z-index: -1;
     background-repeat: no-repeat; }
+    @media (max-width: 375px) {
+      .container::before {
+        background: url("../images/bg-intro-mobile.svg");
+        background-repeat: no-repeat; } }
 
 /*
   Header
@@ -79,7 +86,14 @@ main {
   padding-top: 60px; }
   .header .nav-links {
     display: flex; }
-    @media (max-width: 700px) {
+    @media (max-width: 375px) {
+      .header .nav-links {
+        flex-direction: column;
+        background-color: aliceblue;
+        visibility: hidden;
+        width: 0;
+        height: 0; } }
+    @media (min-width: 376px) and (max-width: 922px) {
       .header .nav-links {
         flex-direction: column;
         background-color: aliceblue;
@@ -88,7 +102,7 @@ main {
         height: 0; } }
     .header .nav-links .link:not(:last-of-type) {
       margin-right: 30px; }
-  @media (max-width: 700px) {
+  @media (max-width: 375px) {
     .header {
       padding: 40px 20px 0 20px; }
       .header a {
@@ -103,7 +117,7 @@ main {
   align-items: center;
   width: 100%;
   margin: 120px auto; }
-  @media (max-width: 700px) {
+  @media (max-width: 375px) {
     .intro {
       padding: 20px;
       margin-top: 40px;
@@ -117,7 +131,7 @@ main {
       max-width: 350px;
       margin-bottom: 40px; }
   .intro .intro-illustration {
-    width: 50%; }
+    width: 100%; }
 
 /*
   About
@@ -126,7 +140,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between; }
-  @media (max-width: 700px) {
+  @media (max-width: 375px) {
     .about {
       padding: 20px;
       flex-direction: column; } }
@@ -139,7 +153,7 @@ main {
   .about .about-list {
     display: flex;
     flex-direction: column; }
-    @media (max-width: 700px) {
+    @media (max-width: 375px) {
       .about .about-list {
         width: 100%; } }
     .about .about-list .about-list-item {
@@ -148,7 +162,7 @@ main {
       grid-template-areas: "number title" ". desc";
       column-gap: 10px;
       margin-bottom: 40px; }
-      @media (max-width: 700px) {
+      @media (max-width: 375px) {
         .about .about-list .about-list-item {
           grid-template-areas: "number title" "desc desc";
           row-gap: 10px; }
@@ -187,6 +201,8 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 170px; }
+  .testimonials h2 {
+    margin-bottom: 70px; }
 
 .testimonials-cards-container {
   display: flex;
@@ -215,35 +231,44 @@ main {
       margin-right: 20px; }
 
 /*
-  Get started
+  Simplify
 ----------------------*/
-.get-started {
+.simplify {
   position: relative;
   background: #F3603C;
   color: #fff;
   width: 100%;
-  padding: 60px 170px; }
-  .get-started .content {
+  padding: 70px 0; }
+  .simplify .content {
+    max-width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 220px;
-    width: 100%; }
-    @media (max-width: 700px) {
-      .get-started .content {
+    margin: 0 auto; }
+    @media (max-width: 375px) {
+      .simplify .content {
         flex-direction: column;
-        height: auto; } }
-  @media (max-width: 700px) {
-    .get-started {
-      padding: 60px 35px; } }
-  .get-started::after {
+        height: auto;
+        max-width: 330px;
+        padding: 90px 0; } }
+  .simplify::after {
     content: '';
     position: absolute;
-    background: url("../images/bg-simplify-section-desktop.svg");
+    background: url("../images/bg-simplify-desktop.svg");
     width: 100%;
     height: 100%;
     opacity: .071;
     top: 0; }
+    @media (max-width: 375px) {
+      .simplify::after {
+        content: '';
+        position: absolute;
+        background: url("../images/bg-simplify-mobile.svg");
+        width: 100%;
+        height: 100%;
+        opacity: .071;
+        top: 0;
+        background-repeat: no-repeat; } }
 
 /*
   Footer
@@ -261,10 +286,10 @@ main {
     width: 100%;
     margin: 0 auto;
     max-width: 1110px; }
-    @media (max-width: 700px) {
+    @media (max-width: 375px) {
       .footer .content {
         height: auto;
-        width: 330px;
+        max-width: 330px;
         align-content: center; }
         .footer .content .social {
           order: 3; }
@@ -335,7 +360,7 @@ main {
   .attribution::after {
     content: '';
     position: absolute;
-    background: url("../images/bg-simplify-section-desktop.svg");
+    background: url("../images/bg-simplify-desktop.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;

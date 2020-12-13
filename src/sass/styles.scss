@@ -70,6 +70,9 @@ a {
 main {
   max-width: 1110px;
   margin: 0 auto;
+  @include tablet {
+    padding: 0 20px;
+  }
 }
 
 .container {
@@ -78,11 +81,15 @@ main {
   &::before {
     content:'';
     position: absolute;
-    background: url('../images/bg-simplify-section-desktop.svg');
+    background: url('../images/bg-intro-desktop.svg');
     min-height: 100%;
     min-width: 100%;
     z-index: -1;
     background-repeat: no-repeat;
+    @include mobile {
+      background: url('../images/bg-intro-mobile.svg');
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -98,6 +105,13 @@ main {
   .nav-links {
     display: flex;
     @include mobile {
+      flex-direction: column;
+      background-color: aliceblue;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    @include tablet {
       flex-direction: column;
       background-color: aliceblue;
       visibility: hidden;
@@ -142,7 +156,7 @@ main {
     }
   }
   .intro-illustration {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -228,6 +242,9 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 170px;
+  h2 {
+    margin-bottom: 70px;
+  }
 }
 
 .testimonials-cards-container {
@@ -263,36 +280,45 @@ main {
 }
 
 /*
-  Get started
+  Simplify
 ----------------------*/
-.get-started {
+.simplify {
   position: relative;
   background: $orange;
   color: $white;
   width: 100%;
-  padding: 60px 170px;
+  padding: 70px 0;
   .content {
+    max-width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 220px;
-    width: 100%;
+    margin: 0 auto;
     @include mobile {
       flex-direction: column;
       height: auto;
+      max-width: 330px;
+      padding: 90px 0;
     }
-  }
-  @include mobile {
-    padding: 60px 35px;
   }
   &::after {
     content: '';
     position: absolute;
-    background: url('../images/bg-simplify-section-desktop.svg');
+    background: url('../images/bg-simplify-desktop.svg');
     width: 100%;
     height: 100%;
     opacity: .071;
     top: 0;
+    @include mobile {
+      content: '';
+      position: absolute;
+      background: url('../images/bg-simplify-mobile.svg');
+      width: 100%;
+      height: 100%;
+      opacity: .071;
+      top: 0;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -314,7 +340,7 @@ main {
     max-width: 1110px;;
     @include mobile {
       height: auto;
-      width: 330px;
+      max-width: 330px;
       align-content: center;
       .social {
         order: 3;
@@ -409,7 +435,7 @@ main {
   &::after {
     content: '';
     position: absolute;
-    background: url('../images/bg-simplify-section-desktop.svg');
+    background: url('../images/bg-simplify-desktop.svg');
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
