@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+button, a, input {
+  outline-color: $orange;
+}
+
 .btn {
   padding: 10px 20px;
   border-radius: 50px;
@@ -89,6 +93,7 @@ main {
     @include mobile {
       background: url('../images/bg-intro-mobile.svg');
       background-repeat: no-repeat;
+      right: -50px;
     }
   }
 }
@@ -102,6 +107,9 @@ main {
   width: 100%;
   align-items: center;
   padding-top: 60px;
+  .btn-menu {
+    display: none;
+  }
   .nav-links {
     display: flex;
     @include mobile {
@@ -123,9 +131,12 @@ main {
     }
   }
   @include mobile {
-    padding: 40px 20px 0 20px;
+    padding: 40px 20px;
     a {
       display: none;
+    }
+    .btn-menu {
+      display: block;
     }
   }
 }
@@ -139,11 +150,6 @@ main {
   align-items: center;
   width: 100%;
   margin: 120px auto;
-  @include mobile {
-      padding: 20px;
-      margin-top: 40px;
-      flex-direction: column;
-  }
   .intro-text {
     max-width: 450px;
     & > h1 {
@@ -158,6 +164,31 @@ main {
   .intro-illustration {
     width: 100%;
   }
+  @include mobile {
+    padding: 0 20px;
+    margin-top: 40px;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto 90px auto;
+    h1 {
+      text-align: center;
+    }
+    .intro-text {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      &> p {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+    .intro-illustration {
+      order: -1;
+    }
+    .btn {
+      margin: 0 auto;
+    }
+  }
 }
 
 /*
@@ -170,14 +201,17 @@ main {
   @include mobile {
     padding: 20px;
     flex-direction: column;
+    .about-summary {
+      text-align: center;
+      p {
+        margin-bottom: 50px;
+      }
+    }
   }
   .about-summary {
     min-width: 50%;
     h2 {
       margin-bottom: 30px;
-    }
-    .about-content {
-      width: 400px;
     }
   }
   .about-list{
@@ -194,9 +228,12 @@ main {
       column-gap: 10px;
       margin-bottom: 40px;
       @include mobile {
-       grid-template-areas: "number title"
+        grid-template-areas: "number title"
                             "desc desc";
         row-gap: 10px;
+        .title {
+          font-size: 16px;
+        }
         .index {
           position: relative;
           &::after {
@@ -302,6 +339,10 @@ main {
       height: auto;
       max-width: 330px;
       padding: 90px 0;
+      h2 {
+        margin: 0 auto 20px auto;
+        text-align: center;
+      }
     }
   }
   &::after {
@@ -347,22 +388,27 @@ main {
       align-content: center;
       .social {
         order: 3;
+        margin-bottom: 45px;
       }
       .logo {
         order: 4;
+        margin: 0 auto 45px auto;
       }
       .contact-form {
         order: 1;
-        margin-bottom: 55px;
+        margin: 50px auto 55px auto;
       }
       .sitemap {
         order: 2;
         .link a {
           width: auto;
         }
+        margin: 0 auto 45px auto;
+        width: 264px;
       }
       .copyright {
         order: 5;
+        margin: 0 auto 28px auto;
       }
     }
   }
@@ -456,5 +502,9 @@ main {
     height: 100%;
     opacity: .071;
     top: 0;
+  }
+  @include mobile {
+    display: flex;
+    flex-direction: column;
   }
 }
