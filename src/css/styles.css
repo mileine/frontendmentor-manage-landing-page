@@ -9,6 +9,9 @@ body {
   font-family: "Be Vietnam", sans-serif;
   font-size: 16px;
   color: #242D52; }
+  body.menu-mobile-visible {
+    max-height: 100vh;
+    overflow-y: hidden; }
 
 ul {
   list-style: none; }
