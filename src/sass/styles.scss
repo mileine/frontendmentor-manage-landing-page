@@ -112,13 +112,6 @@ main {
   }
   .nav-links {
     display: flex;
-    @include mobile {
-      flex-direction: column;
-      background-color: aliceblue;
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
     @include tablet {
       flex-direction: column;
       background-color: aliceblue;
@@ -132,12 +125,45 @@ main {
   }
   @include mobile {
     padding: 40px 20px;
-    a {
+    position: relative;
+    nav {
       display: none;
+      .nav-links {
+        flex-direction: column;
+        background-color: aliceblue;
+        justify-content: space-between;
+        height: 290px;
+        padding: 45px 0;
+        border-radius: 4px;
+        .link {
+          text-align: center;
+        }
+      }
+      &.display {
+        padding: 90px 20px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to top, rgba(0, 0, 0, .65), transparent );
+     }
+     .btn-close {
+       position: absolute;
+       top: 40px;
+       right: 20px;
+     }
     }
     .btn-menu {
       display: block;
+      &.hidden {
+        display: none;
+      }
     }
+  }
+  .btn {
+    display: none;
   }
 }
 
