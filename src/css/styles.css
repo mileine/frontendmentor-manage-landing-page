@@ -229,6 +229,9 @@ main {
       text-align: center; }
     .testimonials-cards-container .testimonial-card:not(:last-of-type) {
       margin-right: 20px; }
+    @media (max-width: 375px) {
+      .testimonials-cards-container .testimonial-card {
+        min-width: 340px; } }
 
 /*
   Simplify
@@ -320,10 +323,21 @@ main {
     letter-spacing: -0.23px; }
     .footer .link a:hover {
       color: #F3603C; }
-  .footer .social a {
-    margin-right: 10px; }
-    .footer .social a:hover path {
-      fill: #F3603C; }
+  .footer .social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 155px; }
+    .footer .social a {
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px; }
+      .footer .social a:hover {
+        color: #F3603C; }
+    @media (max-width: 375px) {
+      .footer .social {
+        max-width: 296px; }
+        .footer .social a {
+          font-size: 32px; } }
   .footer .contact-form, .footer .copyright {
     align-self: flex-end; }
   .footer input {

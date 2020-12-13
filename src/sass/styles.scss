@@ -276,6 +276,9 @@ main {
     &:not(:last-of-type) {
       margin-right: 20px;
     }
+    @include mobile {
+      min-width: 340px;
+    }
   }
 }
 
@@ -384,10 +387,21 @@ main {
     }
   }
   .social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 155px;
     a {
+      font-size: 20px;
+      color: $white;
       margin-right: 10px;
-      &:hover  path {
-        fill: $orange;
+      &:hover{
+        color: $orange;
+      }
+    }
+    @include mobile {
+      max-width: 296px;
+      a {
+        font-size: 32px;
       }
     }
   }
