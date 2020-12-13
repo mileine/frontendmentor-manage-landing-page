@@ -114,6 +114,9 @@ main {
   .btn-menu {
     display: none;
   }
+  .btn-close {
+    display: none;
+  }
   .nav-links {
     display: flex;
     @include tablet {
@@ -134,7 +137,7 @@ main {
       display: none;
       .nav-links {
         flex-direction: column;
-        background-color: aliceblue;
+        background-color: $white;
         justify-content: space-between;
         height: 290px;
         padding: 45px 0;
@@ -152,12 +155,13 @@ main {
         width: 100vw;
         height: 100vh;
         background: linear-gradient(to top, rgba(0, 0, 0, .65), transparent );
-     }
-     .btn-close {
-       position: absolute;
-       top: 40px;
-       right: 20px;
-       background: transparent;
+        .btn-close {
+          position: absolute;
+          top: 40px;
+          right: 20px;
+          background: transparent;
+          display: block;
+        }
      }
     }
     .btn-menu {
@@ -167,9 +171,9 @@ main {
         display: none;
       }
     }
-  }
-  .btn {
-    display: none;
+    .btn {
+      display: none;
+    }
   }
 }
 
