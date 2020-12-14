@@ -111,9 +111,9 @@ button, a, input {
 .header {
   max-width: 1110px;
   margin: 0 auto;
+  padding: 60px 20px;
   .header-content {
     align-items: center;
-    padding-top: 60px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -236,9 +236,10 @@ button, a, input {
   About
 ----------------------*/
 .about {
-  max-width: 1110px;
+  width: 100%;
   .about-content {
-    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
@@ -373,23 +374,13 @@ button, a, input {
   background: $orange;
   color: $white;
   width: 100%;
-  padding: 70px 0;
-  .content {
+  padding: 50px 0;
+  .simplify-content {
     max-width: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    @include mobile {
-      flex-direction: column;
-      height: auto;
-      max-width: 330px;
-      padding: 90px 0;
-      h2 {
-        margin: 0 auto 20px auto;
-        text-align: center;
-      }
-    }
   }
   &::after {
     content: '';
@@ -399,11 +390,32 @@ button, a, input {
     height: 100%;
     opacity: .071;
     top: 0;
-    @include mobile {
+  }
+  @include mobile {
+    .simplify-content {
+      flex-direction: column;
+      height: auto;
+      max-width: 330px;
+      padding: 90px 20px;
+    }
+    h2 {
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+    &::after { 
       background: url('../images/bg-simplify-mobile.svg');
       background-repeat: no-repeat;
     }
-    @include tablet {
+  }
+  @include tablet {
+    h2 {
+      max-width: 75%;
+    }
+    .simplify-content {
+      height: auto;
+      padding: 30px 20px;
+    }
+    &::after { 
       background: url('../images/bg-tablet-pattern.svg');
       background-repeat: no-repeat;
     }
