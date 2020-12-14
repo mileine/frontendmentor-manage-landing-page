@@ -11,7 +11,7 @@ body {
   color: #242D52; }
   body.menu-mobile-visible {
     max-height: 100vh;
-    overflow-y: hidden; }
+    overflow: hidden; }
 
 ul {
   list-style: none; }
