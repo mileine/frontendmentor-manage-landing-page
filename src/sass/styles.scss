@@ -54,6 +54,10 @@ a {
   text-decoration: none;
 }
 
+/*
+  Form components
+---------------*/
+
 button, a, input {
   outline-color: $orange;
 }
@@ -75,14 +79,9 @@ button, a, input {
   }
 }
 
-main {
-  max-width: 1110px;
-  margin: 0 auto;
-  @include tablet {
-    padding: 0 20px;
-  }
-}
-
+/*
+  Main container
+----------------*/
 .container {
   position: relative;
   overflow-x: hidden;
@@ -99,6 +98,10 @@ main {
       background-repeat: no-repeat;
       right: -50px;
     }
+    @include tablet {
+      background: url('../images/bg-tablet-pattern.svg');
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -106,11 +109,15 @@ main {
   Header
 ----------------------*/
 .header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  padding-top: 60px;
+  max-width: 1110px;
+  margin: 0 auto;
+  .header-content {
+    align-items: center;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
   .btn-menu {
     display: none;
   }
@@ -119,18 +126,11 @@ main {
   }
   .nav-links {
     display: flex;
-    @include tablet {
-      flex-direction: column;
-      background-color: aliceblue;
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
     .link:not(:last-of-type) {
       margin-right: 30px;  
     }
   }
-  @include mobile {
+  @include tablet {
     padding: 40px 20px;
     position: relative;
     nav {
@@ -181,11 +181,14 @@ main {
   Intro
 ----------------------*/
 .intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  max-width: 1110px;
   margin: 120px auto;
+  .intro-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .intro-text {
     max-width: 450px;
     & > h1 {
@@ -200,11 +203,13 @@ main {
   .intro-illustration {
     width: 100%;
   }
-  @include mobile {
+  @include tablet {
+    .intro-content {
+      flex-direction: column;
+      align-content: center;
+    }
     padding: 0 20px;
     margin-top: 40px;
-    flex-direction: column;
-    align-content: center;
     margin: 0 auto 90px auto;
     h1 {
       text-align: center;
@@ -231,18 +236,11 @@ main {
   About
 ----------------------*/
 .about {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  @include mobile {
-    padding: 20px;
-    flex-direction: column;
-    .about-summary {
-      text-align: center;
-      p {
-        margin-bottom: 50px;
-      }
-    }
+  max-width: 1110px;
+  .about-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   .about-summary {
     min-width: 50%;
@@ -253,9 +251,6 @@ main {
   .about-list{
     display: flex;
     flex-direction: column;
-    @include mobile {
-      width: 100%;
-    }
     .about-list-item {
       display: grid;
       grid-template-columns: 70px auto;
@@ -263,26 +258,6 @@ main {
                             ". desc";
       column-gap: 10px;
       margin-bottom: 40px;
-      @include mobile {
-        grid-template-areas: "number title"
-                            "desc desc";
-        row-gap: 10px;
-        .title {
-          font-size: 16px;
-        }
-        .index {
-          position: relative;
-          &::after {
-            content: '';
-            width: 470px;
-            height: 40px;
-            background: $orange-light;
-            z-index: -1;
-            position: absolute;
-            left: 30px;
-          }
-        }
-      }
       .index {
         display: flex;
         align-items: center;
@@ -301,6 +276,41 @@ main {
       }
       .description {
         grid-area: desc;
+      }
+    }
+  }
+  @include tablet {
+    .about-content {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .about-summary {
+      text-align: center;
+      p {
+        margin-bottom: 50px;
+      }
+    }
+    .about-list {
+      width: 100%;
+    }
+    .about-list-item {
+      grid-template-areas: "number title"
+                          "desc desc";
+      row-gap: 10px;
+      .title {
+        font-size: 16px;
+      }
+      .index {
+        position: relative;
+        &::after {
+          content: '';
+          width: 750px;
+          height: 40px;
+          background: $orange-light;
+          z-index: -1;
+          position: absolute;
+          left: 30px;
+        }
       }
     }
   }
@@ -390,13 +400,11 @@ main {
     opacity: .071;
     top: 0;
     @include mobile {
-      content: '';
-      position: absolute;
       background: url('../images/bg-simplify-mobile.svg');
-      width: 100%;
-      height: 100%;
-      opacity: .071;
-      top: 0;
+      background-repeat: no-repeat;
+    }
+    @include tablet {
+      background: url('../images/bg-tablet-pattern.svg');
       background-repeat: no-repeat;
     }
   }

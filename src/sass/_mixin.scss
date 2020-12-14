@@ -9,6 +9,12 @@ $desktop-width: 1200px;
 };
 
 @mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content
+  }
+};
+
+@mixin tablet-only {
   @media (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width}) {
     @content
   }
