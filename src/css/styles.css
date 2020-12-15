@@ -53,11 +53,17 @@ button, a, input {
   border-radius: 50px;
   background: #F3603C;
   color: #fff; }
+  .btn:hover {
+    cursor: pointer;
+    background: #f6876c; }
   .btn.btn-shadow {
     box-shadow: 0 2px 5px #FF9F8E; }
   .btn.btn-secondary {
     background: #fff;
     color: #F3603C; }
+    .btn.btn-secondary:hover {
+      color: #f6876c;
+      cursor: pointer; }
     .btn.btn-secondary.btn-shadow {
       box-shadow: 0 5px 10px #DB5943; }
 
@@ -97,14 +103,21 @@ button, a, input {
     display: flex;
     justify-content: space-between;
     width: 100%; }
+  .header .header-logo:hover {
+    cursor: pointer; }
   .header .btn-menu {
     display: none; }
   .header .btn-close {
     display: none; }
   .header .nav-links {
     display: flex; }
-    .header .nav-links .link:not(:last-of-type) {
-      margin-right: 30px; }
+    .header .nav-links .link {
+      color: #242D52; }
+      .header .nav-links .link:hover {
+        cursor: pointer;
+        color: #596bb6; }
+      .header .nav-links .link:not(:last-of-type) {
+        margin-right: 30px; }
   @media (max-width: 768px) {
     .header {
       padding: 40px 20px;

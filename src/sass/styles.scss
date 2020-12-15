@@ -67,12 +67,20 @@ button, a, input {
   border-radius: 50px;
   background : $orange;
   color: $white;
+  &:hover {
+    cursor: pointer;
+    background: lighten($orange, 10%);
+  }
   &.btn-shadow {
     box-shadow: 0 2px 5px $orange-shadow;
   }
   &.btn-secondary {
     background: $white;
     color: $orange;
+    &:hover {
+      color: lighten($orange, 10%);
+      cursor: pointer;
+    }
     &.btn-shadow {
       box-shadow: 0 5px 10px #DB5943;
     }
@@ -118,6 +126,11 @@ button, a, input {
     justify-content: space-between;
     width: 100%;
   }
+  .header-logo {
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .btn-menu {
     display: none;
   }
@@ -126,8 +139,16 @@ button, a, input {
   }
   .nav-links {
     display: flex;
-    .link:not(:last-of-type) {
-      margin-right: 30px;  
+    .link {
+      color: $blue;
+      &:hover {
+        cursor: pointer;
+        color: lighten($blue, 30%);
+      }
+      &:not(:last-of-type) {
+        margin-right: 30px;  
+      }
+
     }
   }
   @include tablet {
