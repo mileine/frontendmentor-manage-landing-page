@@ -421,21 +421,38 @@ button, a, input {
           font-size: 32px; } }
   .footer .contact-form, .footer .copyright {
     align-self: flex-end; }
-  .footer input {
-    padding: 10px 20px;
-    border-radius: 22px;
-    border: none;
-    width: 220px;
-    height: 44px;
-    color: #8D8D8D;
-    font-family: "Be Vietnam", sans-serif;
-    font-size: 13px;
-    letter-spacing: -0.1px; }
+  .footer .contact-form {
+    position: relative; }
+    .footer .contact-form input {
+      padding: 10px 20px;
+      border-radius: 22px;
+      border: none;
+      width: 220px;
+      height: 44px;
+      color: #8D8D8D;
+      font-family: "Be Vietnam", sans-serif;
+      font-size: 13px;
+      letter-spacing: -0.1px; }
+      .footer .contact-form input:focus {
+        outline: none; }
+      .footer .contact-form input.error {
+        border: 1px solid #F33C3C;
+        outline: none;
+        color: #F33C3C; }
+    .footer .contact-form .error-msg {
+      position: absolute;
+      left: 20px;
+      top: 50px;
+      font-size: 12px;
+      color: #F33C3C;
+      font-style: italic; }
   .footer button {
     border: none;
     height: 44px;
     width: 64px;
     border-radius: 22px; }
+    .footer button:focus {
+      outline: none; }
   .footer .copyright {
     font-size: 13px;
     opacity: 50%; }

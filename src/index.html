@@ -8,6 +8,15 @@
     <title>Frontend Mentor | Manage landing page</title>
   </head>
   <body>
+    <div class="test-ims">
+      <img src="./images/icon_e750-e650.svg" alt="">
+      <img src="./images/icon_e450.svg" alt="">
+      <img src="./images/icon-34.svg" alt="">
+      <img src="./images/icon_nepen-P314i.svg" alt="">
+      <img src="./images/icon-g_nepen-P314i.svg" alt="">
+      <img src="./images/ic_nepen-P314i.svg" alt="">
+      <img src="./images/ic_eletra.svg" alt="">
+    </div>
     <div class="container">
       <header class="header">
         <div class="header-content">
@@ -155,8 +164,9 @@
             </ul>
           </div>
           <div class="contact-form">
-            <input type="text" placeholder="Updates in your inbox…"/>
-            <button class="btn">Go</button>
+            <input class="email" type="text" placeholder="Updates in your inbox…" />
+            <span class="error-msg"></span>
+            <button class="btn" onclick="validateEmail()">Go</button>
           </div>
           <span class="copyright">Copyright 2020. All Rights Reserved</span>
         </div>

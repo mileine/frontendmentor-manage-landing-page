@@ -531,22 +531,44 @@ button, a, input {
   .contact-form, .copyright {
     align-self: flex-end;
   }
-  input {
-    padding: 10px 20px;
-    border-radius: 22px;
-    border: none;
-    width: 220px;
-    height: 44px;
-    color: $gray;
-    font-family: $font;
-    font-size: 13px;
-    letter-spacing: -0.1px;
+  .contact-form {
+    position: relative;
+    input {
+      padding: 10px 20px;
+      border-radius: 22px;
+      border: none;
+      width: 220px;
+      height: 44px;
+      color: $gray;
+      font-family: $font;
+      font-size: 13px;
+      letter-spacing: -0.1px;
+      &:focus {
+        outline: none;
+      }
+      &.error {
+        border: 1px solid $orange-dark;
+        outline: none;
+        color: $orange-dark;
+      }
+    }
+    .error-msg{
+      position: absolute;
+      left: 20px;
+      top: 50px;
+      font-size: 12px;
+      color: $orange-dark;
+      font-style: italic;
+    }
   }
   button {
     border: none;
     height: 44px;
     width: 64px;
     border-radius: 22px;
+    &:focus {
+      outline: none;
+    }
   }
   .copyright {
     font-size: 13px;
